@@ -11,9 +11,10 @@ document.getElementById("button").onclick = function() {
         counter = document.createElement('p');
         document.body.appendChild(counter)
     }
-    if (timesClicked == 67
-        
-    alert("you did it!");
+    if (timesClicked == 67)
+    {
+        document.body.style.overflow = 'hidden'
+    }
     img = document.createElement('img');
     // pick a random integer 0..5 and use it in the filename
     img.src = `image${Math.floor(Math.random() * 6)}.webp`;
