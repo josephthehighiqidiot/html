@@ -55,11 +55,10 @@ img {
     
     /* Center the image within the overlay and add a background */
     background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-    display: flex;
     justify-content: center;
     align-items: center;
     
-    /* Ensure the content is centered using JS initially, then change display to flex on click */
+    /* The JS will set display: flex when showing the overlay */
 }
 
 #67 img {
