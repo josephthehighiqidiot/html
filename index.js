@@ -1,6 +1,8 @@
 let img;
 let timesClicked = 0;
 let counter;
+let overlay67 = document.getElementById('67');
+overlay67.style.display = 'none';
 document.getElementById("button").onclick = function() {
     if (document.body.contains(img))
     {
@@ -13,7 +15,8 @@ document.getElementById("button").onclick = function() {
     }
     if (timesClicked == 67)
     {
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden';
+        overlay67.style.display = 'flex';
     }
     img = document.createElement('img');
     // pick a random integer 0..5 and use it in the filename
@@ -28,6 +31,7 @@ document.getElementById("button").onclick = function() {
     }, 2);
     timesClicked += 1;
     counter.textContent = `Button clicked: ${timesClicked} times`;
+    
     
     
 };

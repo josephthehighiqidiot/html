@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
       font-family: 'chicago-font';
       src: local('Chicago'), url('Chicago.woff') format('woff');
       font-weight: normal;
@@ -38,4 +38,33 @@ button {
 img {
     display: block;
     margin: 20px auto;
+}
+#67 {
+    /* Initially hide the overlay */
+    display: none;
+    
+    /* Position it fixed to cover the whole screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* A high z-index puts it above everything else */
+    z-index: 9999; 
+    
+    /* Center the image within the overlay and add a background */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ensure the content is centered using JS initially, then change display to flex on click */
+}
+
+#67 img {
+    /* Style the image within the overlay */
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ensures the image fits without being cropped */
 }
