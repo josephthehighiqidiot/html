@@ -20,8 +20,9 @@ document.getElementById("button").onclick = function() {
     }
     else
     {
-        counter = counterdiv.createElement('p');
-        counterdiv.counter.appendChild(counter)
+        // create a <p> correctly and append only if counterdiv exists
+        counter = document.createElement('p');
+        if (counterdiv) counterdiv.appendChild(counter);
     }
     img = document.createElement('img');
     // pick a random integer 0..5 and use it in the filename
@@ -35,7 +36,7 @@ document.getElementById("button").onclick = function() {
         img.style.opacity = '1';
     }, 2);
     timesClicked += 1;
-    counter.textContent = `Button clicked: ${timesClicked} times`;
+    if (counter) counter.textContent = `Button clicked: ${timesClicked} times`;
         if (timesClicked == 67)
     {
         document.body.counter.style.p.color = 'red';
