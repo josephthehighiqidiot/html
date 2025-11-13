@@ -2,6 +2,15 @@ let img;
 let timesClicked = 0;
 let counter;
 let overlay67 = document.getElementById('67');
+let counterdiv = document.getElementById('counterdiv');
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function wait(time) {
+    console.log("Start waiting...");
+    await sleep(time);  // Waits for 3 seconds
+    console.log(`Waited ${time} miliseconds!`);
+}
 overlay67.style.display = 'none';
 document.getElementById("button").onclick = function() {
     if (document.body.contains(img))
@@ -10,13 +19,8 @@ document.getElementById("button").onclick = function() {
     }
     else
     {
-        counter = document.createElement('p');
-        document.body.appendChild(counter)
-    }
-    if (timesClicked == 67)
-    {
-        document.body.style.overflow = 'hidden';
-        overlay67.style.display = 'flex';
+        counter = counterdiv.createElement('p');
+        counterdiv.counter.appendChild(counter)
     }
     img = document.createElement('img');
     // pick a random integer 0..5 and use it in the filename
@@ -31,6 +35,14 @@ document.getElementById("button").onclick = function() {
     }, 2);
     timesClicked += 1;
     counter.textContent = `Button clicked: ${timesClicked} times`;
+        if (timesClicked == 67)
+    {
+        document.body.counter.style.p.color = 'red';
+        wait(1800);
+        playSound('alarm.mp3');
+        document.body.style.overflow = 'hidden';
+        overlay67.style.display = 'flex';
+    }
     
     
     
