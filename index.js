@@ -27,7 +27,7 @@ document.getElementById("button").onclick = function() {
     img = document.createElement('img');
     // pick a random integer 0..5 and use it in the filename
     img.src = `image${Math.floor(Math.random() * 6)}.webp`;
-    img.style.opacity = '0';
+    img.style.opacity = '0';s
     document.body.appendChild(img);
     
     // Trigger fade-in animation
@@ -39,7 +39,7 @@ document.getElementById("button").onclick = function() {
     if (counter) counter.textContent = `Button clicked: ${timesClicked} times`;
         if (timesClicked == 67)
     {
-        document.body.counter.style.p.color = 'red';
+        if (counter) counter.style.color = 'red';
         wait(1800);
         alarmSound.play('alarm.mp3');
         document.body.style.overflow = 'hidden';
