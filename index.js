@@ -3,6 +3,7 @@ let timesClicked = 0;
 let counter;
 let overlay67 = document.getElementById('67');
 let counterdiv = document.getElementById('counterdiv');
+let alarmSound = document.getElementById('alarm');
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -39,7 +40,7 @@ document.getElementById("button").onclick = function() {
     {
         document.body.counter.style.p.color = 'red';
         wait(1800);
-        sound.play('alarm.mp3');
+        alarmSound.play('alarm.mp3');
         document.body.style.overflow = 'hidden';
         overlay67.style.display = 'flex';
     }
