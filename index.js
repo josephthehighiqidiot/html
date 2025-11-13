@@ -39,7 +39,7 @@ document.getElementById("button").onclick = function() {
     {
         document.body.counter.style.p.color = 'red';
         wait(1800);
-        playSound('alarm.mp3');
+        sound.play('alarm.mp3');
         document.body.style.overflow = 'hidden';
         overlay67.style.display = 'flex';
     }
